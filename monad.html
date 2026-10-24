@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monad Pulse | On-Chain Voting</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="monad.css">
 </head>
 <body>
 
@@ -159,9 +151,14 @@
                         Cast My Vote <span>→</span>
                     </button>
 
-                    <p class="vote-note" id="pesan">
-                        Connect wallet untuk berpartisipasi dalam voting.
-                    </p>
+                    
+                    <div class="notification" id="pesan" role="status">
+                        <span class="notification-icon">✦</span>
+                        <span class="notification-text">
+                            Connect wallet untuk berpartisipasi dalam voting.
+                        </span>
+                    </div>
+
 
                     <div class="poll-footer">
                         <span>◈ On-chain voting</span>
@@ -270,8 +267,5 @@
     </main>
 
     <script src="app.js"></script>
-</body>
-</html>
-
 </body>
 </html>
