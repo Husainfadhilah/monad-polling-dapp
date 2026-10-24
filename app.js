@@ -43,17 +43,22 @@ async function connectWallet() {
 }
 
 
-// 3. Fungsi untuk mengirim jawaban kuesioner ke Blockchain Monad
+// HAPUS KODE LAMA DI BAGIAN ATAS FUNGSI submitJawaban() DAN GANTI DENGAN INI:
 async function submitJawaban() {
-    // Mengambil nilai pilihan jawaban dari HTML buatan temanmu (Opsi 0, 1, atau 2)
+    // 1. Mengambil nilai dari 1 pertanyaan yang ada di HTML (Opsi 0, 1, atau 2)
     const q1 = document.querySelector('input[name="q1"]:checked')?.value;
-    const q2 = document.querySelector('input[name="q2"]:checked')?.value;
-    const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+    
+    // 2. Karena di web hanya ada 1 pertanyaan, kita isi otomatis q2 dan q3 dengan angka "0"
+    // Langkah ini wajib agar database Smart Contract kamu di Monad tidak kebingungan
+    const q2 = "0"; 
+    const q3 = "0"; 
 
-    if (!q1 || !q2 || !q3) {
-        alert("Mohon jawab semua pertanyaan terlebih dahulu!");
+    // 3. Validasi: Cukup pastikan pertanyaan pertama sudah dipilih oleh user
+    if (q1 === undefined) {
+        alert("Mohon pilih salah satu opsi jawaban terlebih dahulu!");
         return;
     }
+
 
     try {
         alert("Mohon setujui transaksi di MetaMask kamu...");
