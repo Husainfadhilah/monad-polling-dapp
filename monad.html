@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monad Pulse | On-Chain Voting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">P</span>
+            <span>MONAD<span class="logo-light">PULSE</span></span>
+        </a>
+
+        <nav>
+            <a href="#polling" class="nav-active">Explore Polls</a>
+            <a href="#aktivitas">Activity</a>
+        </nav>
+
+        <button class="wallet-button" id="connectWallet">
+            <span class="wallet-dot"></span>
+            Connect Wallet
+        </button>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    DECENTRALIZED GOVERNANCE
+                </span>
+
+                <h1>Your voice.<br><span>On-chain.</span></h1>
+
+                <p>
+                    Suarakan pendapatmu, tentukan masa depan komunitas.
+                    Setiap keputusan dibuat lebih transparan dengan blockchain.
+                </p>
+
+                <div class="hero-tags">
+                    <span>◈ Transparent</span>
+                    <span>✓ Verifiable</span>
+                    <span>⌁ Community-driven</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="visual-core">
+                    <span>◈</span>
+                </div>
+                <span class="orbit-label label-one">VOTE</span>
+                <span class="orbit-label label-two">VERIFY</span>
+                <span class="orbit-label label-three">BUILD</span>
+            </div>
+        </section>
+
+        <section class="network-bar">
+            <div class="network-info">
+                <span class="network-icon">◈</span>
+                <div>
+                    <strong>Monad Testnet</strong>
+                    <small>Network environment</small>
+                </div>
+            </div>
+
+            <div class="network-status">
+                <span class="status-dot"></span>
+                Testnet mode
+            </div>
+        </section>
+
+        <section class="dashboard-grid" id="polling">
+
+            <div class="main-column">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">COMMUNITY GOVERNANCE</span>
+                        <h2>Active Poll</h2>
+                    </div>
+                    <span class="live-badge">
+                        <span class="status-dot"></span>
+                        LIVE POLL
+                    </span>
+                </div>
+
+                <article class="poll-card">
+                    <div class="poll-top">
+                        <span class="poll-id">POLL #024</span>
+                        <span class="poll-category">Community</span>
+                    </div>
+
+                    <h3>What should we build next?</h3>
+
+                    <p class="poll-description">
+                        Bantu komunitas menentukan prioritas pengembangan
+                        berikutnya. Pilih ide yang paling bermanfaat.
+                    </p>
+
+                    <div class="poll-options">
+
+                        <label class="poll-option">
+                            <input type="radio" name="jawaban" value="Developer Tools">
+
+                            <span class="option-icon">⌘</span>
+
+                            <span class="option-content">
+                                <strong>Developer Tools</strong>
+                                <small>Tools untuk developer Web3</small>
+                            </span>
+
+                            <span class="option-arrow">↗</span>
+                        </label>
+
+                        <label class="poll-option">
+                            <input type="radio" name="jawaban" value="Community Grants">
+
+                            <span class="option-icon">✳</span>
+
+                            <span class="option-content">
+                                <strong>Community Grants</strong>
+                                <small>Dukungan untuk proyek komunitas</small>
+                            </span>
+
+                            <span class="option-arrow">↗</span>
+                        </label>
+
+                        <label class="poll-option">
+                            <input type="radio" name="jawaban" value="Learning Resources">
+
+                            <span class="option-icon">⌑</span>
+
+                            <span class="option-content">
+                                <strong>Learning Resources</strong>
+                                <small>Materi belajar blockchain</small>
+                            </span>
+
+                            <span class="option-arrow">↗</span>
+                        </label>
+
+                    </div>
+
+                    <button class="vote-button" id="submitVote">
+                        Cast My Vote <span>→</span>
+                    </button>
+
+                    <p class="vote-note" id="pesan">
+                        Connect wallet untuk berpartisipasi dalam voting.
+                    </p>
+
+                    <div class="poll-footer">
+                        <span>◈ On-chain voting</span>
+                        <span>One choice per submission</span>
+                    </div>
+                </article>
+
+                <section class="activity-section" id="aktivitas">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-label">BLOCKCHAIN RECORDS</span>
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <span class="activity-count">Latest records</span>
+                    </div>
+
+                    <div class="activity-card">
+
+                        <div class="activity-row">
+                            <div class="activity-avatar">V</div>
+                            <div class="activity-details">
+                                <strong>Vote submitted</strong>
+                                <span>0x71...a92f</span>
+                            </div>
+                            <div class="activity-meta">
+                                <span class="confirmed">Demo record</span>
+                                <small>Sample data</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-row">
+                            <div class="activity-avatar">V</div>
+                            <div class="activity-details">
+                                <strong>Vote submitted</strong>
+                                <span>0x3c...81bd</span>
+                            </div>
+                            <div class="activity-meta">
+                                <span class="confirmed">Demo record</span>
+                                <small>Sample data</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <aside class="side-column">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">POLL OVERVIEW</span>
+                        <h2>At a glance</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">◉</span>
+                    <span class="stat-label">Total Votes</span>
+                    <strong>1,284</strong>
+                    <small>Recorded participation</small>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">☷</span>
+                    <span class="stat-label">Available Options</span>
+                    <strong>03</strong>
+                    <small>Choices in this poll</small>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">◈</span>
+                    <span class="stat-label">Network</span>
+                    <strong class="network-name">Monad</strong>
+                    <small><span class="status-dot"></span> Testnet environment</small>
+                </div>
+
+                <div class="transparency-card">
+                    <div class="transparency-icon">✧</div>
+                    <h3>Built on transparency.</h3>
+                    <p>
+                        Hasil voting dirancang agar dapat diverifikasi
+                        melalui smart contract dan catatan blockchain.
+                    </p>
+                    <span>POWERED BY BLOCKCHAIN</span>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <footer class="footer">
+            <a href="#" class="logo footer-logo">
+                <span class="logo-icon">P</span>
+                <span>MONAD<span class="logo-light">PULSE</span></span>
+            </a>
+
+            <p>Community decisions, transparently built.</p>
+
+            <span class="footer-status">
+                <span class="status-dot"></span>
+                Frontend Preview
+            </span>
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+</body>
+</html>
