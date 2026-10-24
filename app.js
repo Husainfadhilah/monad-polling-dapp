@@ -149,21 +149,32 @@ let pollingContract;
 async function connectWallet() {
     if (window.ethereum) {
         try {
-            // Meminta izin user untuk konek wallet
+            // Meminta izin MetaMask untuk tersambung
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-            alert("Wallet Terhubung: " + accounts[0]);
+            console.log("Wallet terhubung:", accounts[0]);
             
-            // Menyiapkan koneksi Web3 menggunakan library Ethers.js
-            provider = new ethers.providers.Web3Provider(window.ethereum);
-            signer = provider.getSigner();
+            // JEMBATAN OTOMATIS (Mendeteksi otomatis apakah pakai ethers V5 atau V6)
+            if (typeof ethers.providers !== 'undefined') {
+                // Jalur jika web membaca Ethers.js Versi 5
+                provider = new ethers.providers.Web3Provider(window.ethereum);
+            } else {
+                // Jalur jika web membaca Ethers.js Versi 6
+                provider = new ethers.BrowserProvider(window.ethereum);
+            }
+            
+            signer = await provider.getSigner();
             pollingContract = new ethers.Contract(contractAddress, contractABI, signer);
+            
+            alert("Wallet Berhasil Terhubung: " + accounts[0]);
         } catch (error) {
             console.error("User menolak koneksi wallet", error);
+            alert("Koneksi dibatalkan oleh pengguna.");
         }
     } else {
-        alert("MetaMask belum terinstall! Silakan install MetaMask terlebih dahulu.");
+        alert("MetaMask belum terdeteksi! Pastikan ekstension MetaMask sudah aktif di browser ini.");
     }
 }
+
 
 // 3. Fungsi untuk mengirim jawaban kuesioner ke Blockchain Monad
 async function submitJawaban() {
