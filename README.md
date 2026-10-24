@@ -67,5 +67,5 @@ Project ini dibangun secara kolaboratif oleh tim yang terdiri dari 2 orang denga
 1. **Clone / Download ZIP** repository project ini ke komputer lokal Anda.
 2. Pastikan browser Anda (Chrome/Brave) sudah terpasang ekstensi **MetaMask**.
 3. Alihkan jaringan MetaMask Anda ke **Monad Testnet** dan pastikan memiliki saldo koin uji coba (\$MON) dari *faucet*.
-4. Buka folder project, jalankan file `monad.html` menggunakan fitur **Live Server** di VS Code (`http://127.0.0`).
+4. Buka folder project, jalankan file `monad.html` menggunakan fitur **Live Server** di VS Code (`http://127.0.0.1:5500`).
 5. Klik **Connect Wallet**, pilih opsi opini Anda, dan klik **Cast My Vote** untuk mengirimkan data ke blockchain!
