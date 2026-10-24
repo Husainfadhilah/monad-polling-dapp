@@ -203,3 +203,6 @@ async function submitJawaban() {
         alert("Gagal mengirim suara. Catatan: 1 Wallet hanya bisa memilih 1 kali!");
     }
 }
+document.getElementById("connectWallet").addEventListener("click", connectWallet);
+
+console.log(window.ethereum);
